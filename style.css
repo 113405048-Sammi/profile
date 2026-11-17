@@ -10,3 +10,11 @@
     .contact{background:var(--soft);border-radius:24px;padding:50px 55px;display:flex;justify-content:space-between;align-items:center;gap:25px}.contact h2{margin:0 0 8px}.contact p{margin:0;color:var(--muted)}.contact a{border-bottom:1px solid var(--accent);color:var(--accent);font-weight:600}footer{padding:35px 0 45px;color:#7b8581;font-size:13px;display:flex;justify-content:space-between}
     @media(max-width:760px){.nav{min-height:65px}.navlinks{gap:14px;font-size:12px}.hero{grid-template-columns:1fr;padding:66px 0 82px;gap:45px}.hero-art{max-width:430px;width:100%;min-height:360px;margin:auto}.about-grid,.projects{grid-template-columns:1fr;gap:23px}.section-head{display:block}.section-detail{margin-top:15px}.contact{display:block;padding:35px 28px}.contact>a{display:inline-block;margin-top:22px}section{padding:56px 0}footer{gap:14px;flex-wrap:wrap}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* 攝影作品展示 */
+.project-art.photo-link { display:block; height:285px; overflow:hidden; background:#e5eee9; cursor:zoom-in; }
+.project-art.photo-link img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; transition:transform .35s ease; }
+.project-art.photo-link:hover img, .project-art.photo-link:focus-visible img { transform:scale(1.045); }
+.project-art.photo-link:focus-visible { outline:3px solid var(--accent); outline-offset:-3px; }
+@media(min-width:761px) { .projects { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media(prefers-reduced-motion:reduce) { .project-art.photo-link img {transition:none;} }
